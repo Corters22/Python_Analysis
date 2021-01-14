@@ -1,6 +1,0 @@
-import pandas as pd
-
-df = pd.read_csv('C:\Users\Courtney\utsa-san-data-pt-12-2020-u-c\02-Homework\03-Python\Instructions\PyBank\Resources\budget_data.csv')
-
-print(df.info)
-
