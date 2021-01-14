@@ -47,12 +47,12 @@ print("Average Change: $" + f'{avg_change:.2f}')
 print("Greatest Increase in Profits: " + great_inc_per + ' ($' + str(max(period_change_list)) + ')')
 print("Greatest Decrease in Profits: " + great_dec_per + ' ($' + str(min(period_change_list)) + ')')
 
-
-
-   
-
-    
-   
-
-
-    
+output_path = os.path.join("../Analysis", "results.txt")
+with open(output_path, 'w', newline='') as textfile:
+    print("Financial Analysis", file=textfile)
+    print("--------------------------", file=textfile)
+    print("Total Months: " + str(row_count), file=textfile)
+    print("Total: $" + str(total), file=textfile)
+    print("Average Change: $" + f'{avg_change:.2f}', file=textfile)
+    print("Greatest Increase in Profits: " + great_inc_per + ' ($' + str(max(period_change_list)) + ')', file=textfile)
+    print("Greatest Decrease in Profits: " + great_dec_per + ' ($' + str(min(period_change_list)) + ')', file=textfile)
