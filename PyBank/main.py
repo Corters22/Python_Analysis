@@ -16,14 +16,13 @@ with open(csvpath) as csvfile:
     profit_losses = 0
     for row in csvreader:
         #calculating count of rows
-        row_count = row_count + 1
+        row_count += 1
         #calculation total profits/losses
-        total = total + int(row[1])
+        total += int(row[1])
         #calculating changes between two date periods
-        profit_losses_2 = int(row[1])
-        period_change = profit_losses_2 - profit_losses
-        period_change_list.append(period_change)
         #making new lists
+            #period_change = int(row[1]) - profit_losses
+        period_change_list.append(int(row[1]) - profit_losses)
         date.append(row[0])
         prof_loss.append(row[1]) 
         #resetting profit loss value
